@@ -1,8 +1,8 @@
 body {
     margin: 0;
     min-height: 100vh;
+    color: white;
 }
-
 
 .table {
     height: 100vh;
@@ -10,10 +10,18 @@ body {
     background-color: green;
 }
 
+.value {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
 .hand {
     position: relative;
-    left: 750px;
-    top: 200px;
+    left: 45vw;
+    top: 50vh;
     width: 900px;
 }
 
@@ -29,8 +37,7 @@ body {
     border: 2px solid red;
     border-radius: 10px;
     background-color: black;
-    transform-origin: bottom;
-    color: white;
+    transform-origin: center;
     transition: transform 0.5s;
     font-size: 1.75rem;
 }
@@ -72,6 +79,7 @@ body {
 }
 
 .card:nth-child(1) {
+    animation: card-1 2s;
     transform: translate(-190px, 55px) rotate(-31deg);
     z-index: 1;
 } 
@@ -81,7 +89,18 @@ body {
     z-index: 6;
 } 
 
+@keyframes card-1 {
+    0% {
+        transform: translate(0, -2000px) rotate(-1440deg);
+    }
+
+    100% {
+        transform: translate(-190px, 55px) rotate(-31deg);
+    }
+}
+
 .card:nth-child(2) {
+    animation: card-2 2.5s;
     transform: translate(-100px, 15px) rotate(-15deg);
     z-index: 2;
 }
@@ -91,17 +110,39 @@ body {
     z-index: 6;
 }
 
+@keyframes card-2 {
+    0% {
+        transform: translate(0, -2000px) rotate(-1440deg);
+    }
+
+    100% {
+        transform: translate(-100px, 15px) rotate(-15deg);
+    }
+}
+
 .card:nth-child(3) {
-    transform: rotate(0deg) translate(0, 0);
+    animation: card-3 3s;
+    transform: translate(0, 0) rotate(0deg) ;
     z-index: 3;
 }
 
 .card:nth-child(3):hover {
-    transform: rotate(0deg) translate(0, -20px) scale(1.1);
+    transform: translate(0, -20px) rotate(0deg) scale(1.1);
     z-index: 6;
 }
 
+@keyframes card-3 {
+    0% {
+        transform: translate(0, -2000px) rotate(-1440deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg) ;
+    }
+}
+
 .card:nth-child(4) {
+    animation: card-4 3.5s;
     transform: translate(100px, 15px) rotate(15deg);
     z-index: 4;
 }
@@ -111,7 +152,18 @@ body {
     z-index: 6;
 }
 
+@keyframes card-4 {
+    0% {
+        transform: translate(0, -2000px) rotate(-1440deg);
+    }
+
+    100% {
+        transform: translate(100px, 15px) rotate(15deg);
+    }
+}
+
 .card:nth-child(5) {
+    animation: card-5 4s;
     transform: translate(190px, 55px) rotate(31deg);
     z-index: 5;
 }
@@ -119,4 +171,97 @@ body {
 .card:nth-child(5):hover {
     transform: translate(190px, 35px) rotate(31deg) scale(1.1);
     z-index: 6;
+}
+
+@keyframes card-5 {
+    0% {
+        transform: translate(0, -2000px) rotate(-1440deg);
+    }
+
+    100% {
+        transform: translate(190px, 55px) rotate(31deg);
+    }
+}
+
+.chips-container {
+    position: absolute;
+    top: 50vh;
+    right: 5vw;
+    width: 400px;
+    height: 250px;
+    display: grid;
+    grid-template-areas: 
+        'fives twos ones'
+        'count-fives count-twos count-ones';
+        grid-template-columns: 120px 120px 120px;
+    justify-content: center;
+    justify-items: center;
+    align-items: flex-end;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.chip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 20px solid;
+    background-color: white;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.chip-500 {
+    border-color: orange;
+    grid-area: fives;
+}
+
+.chip-200 {
+    border-color: cyan;
+    grid-area: twos;
+}
+
+.chip-100 {
+    border-color: purple;
+    grid-area: ones;
+}
+
+[class^="count"] {
+    align-self: flex-start;
+    font-size: 1.25rem;
+    height: 0;
+}
+
+.count-500 {
+    grid-area: count-fives;
+}
+
+.count-200 {
+    grid-area: count-twos;
+}
+
+.count-100 {
+    grid-area: count-ones;
+}
+
+.pot {
+    position: absolute;
+    top: 5vh;
+    left: 31vw;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    gap: 0.5rem;
 }

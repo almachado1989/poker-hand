@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
     <div class="table">
@@ -74,7 +75,35 @@
                 <span class="middle">&clubsuit;</span>
             </div>
         </div>
+        <div id="chips" class="chips-container" ondrop="dragDrop(event, this)" ondragover="allowDrop(event)">
+            <div id="handValue" class="value"></div>
+            <div id="500count" class="count-500"></div>
+            <div id="200count" class="count-200"></div>
+            <div id="100count" class="count-100"></div>
+            <div class="chip chip-500" draggable="true" ondragstart="dragStart(event)" data-value="500">
+                500
+            </div>
+            <div class="chip chip-200" draggable="true" ondragstart="dragStart(event)" data-value="200">
+                200
+            </div>
+            <div class="chip chip-100" draggable="true" ondragstart="dragStart(event)" data-value="100">
+                100
+            </div>
+            <div class="chip chip-500" draggable="true" ondragstart="dragStart(event)" data-value="500">
+                500
+            </div>
+            <div class="chip chip-200" draggable="true" ondragstart="dragStart(event)" data-value="200">
+                200
+            </div>
+            <div class="chip chip-100" draggable="true" ondragstart="dragStart(event)" data-value="100">
+                100
+            </div>
+        </div>
+        <div id="pot" class="pot" ondrop="dragDrop(event, this)" ondragover="allowDrop(event)">
+            <div id="potValue" class="value"></div>
+        </div>
     </div>
+    
 
 </body>
 </html>
