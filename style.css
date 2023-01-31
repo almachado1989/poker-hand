@@ -72,12 +72,12 @@ body {
 }
 
 .card:nth-child(1) {
-    transform: translate(-200px, 55px) rotate(-30deg);
+    transform: translate(-190px, 55px) rotate(-31deg);
     z-index: 1;
 } 
 
 .card:nth-child(1):hover {
-    transform: translate(-200px, 35px) rotate(-30deg) scale(1.1);
+    transform: translate(-190px, 35px) rotate(-31deg) scale(1.1);
     z-index: 6;
 } 
 
@@ -112,11 +112,11 @@ body {
 }
 
 .card:nth-child(5) {
-    transform: translate(200px, 55px) rotate(30deg);
+    transform: translate(190px, 55px) rotate(31deg);
     z-index: 5;
 }
 
 .card:nth-child(5):hover {
-    transform: translate(200px, 35px) rotate(30deg) scale(1.1);
+    transform: translate(190px, 35px) rotate(31deg) scale(1.1);
     z-index: 6;
 }
