@@ -7,74 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
+    <script defer src="hands.js"></script>
 </head>
 <body>
     <div class="table">
-        <div class="hand">
-            <div class="card">
-                <span class="icon top">&spadesuit; 6</span>
-                <span class="icon bottom">&spadesuit; 6</span>
-                <div class="card-body">
-                    <span class="">&spadesuit;</span>
-                    <span class="">&spadesuit;</span>
-                    <span class="">&spadesuit;</span>
-                    <span class="">&spadesuit;</span>
-                    <span class="">&spadesuit;</span>
-                    <span class="">&spadesuit;</span>
-                </div>
-            </div>
-            <div class="card">
-                <span class="icon top">&clubsuit; 3</span>
-                <span class="icon bottom">&clubsuit; 3</span>
-                <div class="card-body">
-                    <span class="">&clubsuit;</span>
-                    <span class="">&clubsuit;</span>
-                </div>
-                <span class="middle">&clubsuit;</span>
-            </div>
-            <div class="card">
-                <span class="icon top">
-                    <span class="red">&diamondsuit; </span>5
-                </span>
-                <span class="icon bottom">
-                    <span class="red">&diamondsuit; </span>5
-                </span>
-                <div class="card-body red">
-                    <span class="">&diamondsuit;</span>
-                    <span class="">&diamondsuit;</span>
-                    <span class="">&diamondsuit;</span>
-                    <span class="">&diamondsuit;</span>   
-                </div>
-                <span class="middle red">&diamondsuit;</span>
-            </div>
-            <div class="card">
-                <span class="icon top">
-                    <span class="red">&diamondsuit; </span>4
-                </span>
-                <span class="icon bottom">
-                    <span class="red">&heartsuit;</span>4
-                </span>
-                <div class="card-body red">
-                    <span class="">&heartsuit;</span>
-                    <span class="">&heartsuit;</span>
-                    <span class="">&heartsuit;</span>
-                    <span class="">&heartsuit;</span>   
-                </div>
-            </div>
-            <div class="card">
-                <span class="icon top">&clubsuit; 7</span>
-                <span class="icon bottom">&clubsuit; 7</span>
-                <div class="card-body">
-                    <span class="">&clubsuit;</span>
-                    <span class="">&clubsuit;</span>
-                    <span class="">&clubsuit;</span>
-                    <span class="">&clubsuit;</span>
-                    <span class="">&clubsuit;</span>
-                    <span class="">&clubsuit;</span>
-                </div>
-                <span class="middle">&clubsuit;</span>
-            </div>
-        </div>
+        <button id="deal" class="button deal" onclick="deal()">Deal</button>
+        <button id="bet" class="button bet" onclick="sortHand()">Bet</button>
+        <button id="fold" class="button fold" onclick="fold()">Fold</button>
+        <button id="mulligan" class="mulligan">Swap</button>
+        <div id="discard" class="discard"></div>
+        
+        <div class="hand"></div>
+        
         <div id="chips" class="chips-container" ondrop="dragDrop(event, this)" ondragover="allowDrop(event)">
             <div id="handValue" class="value"></div>
             <div id="500count" class="count-500"></div>
@@ -103,7 +47,5 @@
             <div id="potValue" class="value"></div>
         </div>
     </div>
-    
-
 </body>
 </html>

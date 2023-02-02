@@ -1,0 +1,49 @@
+order the hand from highest to lowest
+
+check the value of the highest card in the hand
+
+check the value of the second card in the hand
+
+check if the value of the first card and the second card are the same
+
+check the value of the third card in the hand
+
+check if the value of the third card is the same as the second or first cards
+
+
+
+
+
+
+
+high card
+value of the highest card in the hand
+
+pair
+two cards have the same values
+
+two pair
+two different pairs of cards have the same value
+
+three of a kind
+three cards have the same value
+
+full house
+three cards have the same value and two other cards have the same value
+
+four of a kind
+four cards have the same value
+
+straight
+cards have consecutive values
+
+flush
+cards are all the same suit
+
+straight flush 
+cards have consecutive values and the same suit
+
+royal flush
+cards have the same value and the same suit and the highest card is the ace
+
+
